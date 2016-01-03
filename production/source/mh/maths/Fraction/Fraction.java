@@ -36,9 +36,7 @@ public class Fraction {
 
     @Override
     public int hashCode() {
-        int result = denominator;
-        result = 31 * result + numerator;
-        return result;
+        return 31 * denominator + numerator;
     }
 
     @Override
