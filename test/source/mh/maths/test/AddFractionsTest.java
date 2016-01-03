@@ -78,7 +78,6 @@ public class AddFractionsTest {
     }
 
     @Test
-    @Ignore("Constructor doesnt yet avoid neg denom")
     public void negativeEverywhere() throws Exception {
         assertEquals(new Fraction(1,2), new Fraction(1,-4).plus(new Fraction(-3,-4)));
     }
