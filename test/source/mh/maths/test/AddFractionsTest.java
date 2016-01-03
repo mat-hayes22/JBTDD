@@ -41,8 +41,7 @@ public class AddFractionsTest {
 
     @Test
     public void nonTrivalSameDenominator() throws Exception {
-        final Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
-        assertEquals(new Fraction(3,5), sum);
+        assertEquals(new Fraction(3,5), new Fraction(1, 5).plus(new Fraction(2, 5)));
     }
 
 }
