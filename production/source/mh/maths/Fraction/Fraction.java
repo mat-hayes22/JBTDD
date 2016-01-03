@@ -1,5 +1,7 @@
 package mh.maths.Fraction;
 
+import static mh.maths.Fraction.NumberTheory.gcd;
+
 /**
  * Created by mat on 01/01/2016.
  */
@@ -14,8 +16,8 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        this.numerator = numerator / gcd(numerator, denominator);
+        this.denominator = denominator / gcd(numerator, denominator);
     }
 
     public Fraction plus(Fraction that) {
