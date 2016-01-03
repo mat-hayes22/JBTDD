@@ -26,4 +26,9 @@ public class ReduceFractionTest {
         assertEquals(new Fraction(6), new Fraction(24,4));
     }
 
+    @Test
+    public void reduceToZero() throws Exception {
+        assertEquals(new Fraction(0), new Fraction(0,124987));
+    }
+
 }
