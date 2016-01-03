@@ -1,5 +1,6 @@
 package mh.maths.test;
 
+import mh.maths.Fraction.NumberTheory;
 import org.junit.Test;
 
 import static mh.maths.Fraction.NumberTheory.gcd;
@@ -34,6 +35,13 @@ public class GreatestCommonDivisorTest {
         assertEquals(2, gcd(6,8));
         assertEquals(7, gcd(49,315));
         assertEquals(4, gcd(-24,-28));
+    }
+
+    @Test
+    public void zero() throws  Exception {
+        assertEquals(1, NumberTheory.gcd(1,0));
+        assertEquals(5, NumberTheory.gcd(0,5));
+        assertEquals(0, NumberTheory.gcd(0,0));
     }
 
 
