@@ -16,8 +16,10 @@ public class Fraction {
     }
 
     public Fraction(int numerator, int denominator) {
-        this.numerator = numerator / gcd(numerator, denominator);
-        this.denominator = denominator / gcd(numerator, denominator);
+        final int signOfDenom = denominator < 0 ? -1 : 1;
+        final int gcd = gcd(numerator, denominator) * signOfDenom;
+        this.numerator = numerator / gcd;
+        this.denominator = denominator / gcd;
     }
 
     public Fraction plus(Fraction that) {

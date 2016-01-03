@@ -1,6 +1,7 @@
 package mh.maths.test;
 
 import mh.maths.Fraction.Fraction;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -39,6 +40,12 @@ public class FractionEqualsTest {
     @Test
     public void diffrentDenominatorsWithoutReducingDenomintors() throws Exception {
         assertEquals(new Fraction(5,6), new Fraction(1,2).plus(new Fraction(1, 3)));
+    }
+
+    @Test
+    public void negativeDenominators() throws Exception {
+        assertEquals(new Fraction(1,2), new Fraction(-1,-2));
+        assertEquals(new Fraction(-1,2), new Fraction(1,-2));
     }
 
 
